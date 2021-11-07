@@ -1,0 +1,12 @@
+syntax on
+set visualbell
+set encoding=utf-8
+set fileencoding=utf-8
+setlocal spell
+set complete+=kspell
+set ruler
+"  highlight ColorColumn ctermbg=gray
+set colorcolumn=80
+match ErrorMsg '\%>80v.\+'
+
+set wrap linebreak nolist
