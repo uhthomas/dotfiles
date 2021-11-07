@@ -1,0 +1,10 @@
+Host *
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_ed25519
+
+  # https://puppet.com/blog/speed-up-ssh-by-reusing-connections/
+  ControlMaster auto
+  ControlPath ~/.ssh/sockets/%r@%h-%p
+  ControlPersist 600
+  ServerAliveInterval 15
+  ServerAliveCountMax 3
