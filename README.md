@@ -12,7 +12,7 @@ chezmoi without a package manger, I wouldn't recommend it.
 Then init chezmoi and apply the configuration:
 
 ```sh
-chezmoi init --apply uhthomas
+chezmoi init --apply --ssh uhthomas
 ```
 
 ## Why chezmoi?
