@@ -3,7 +3,7 @@ export EDITOR="vim"
 {{- /* Add cargo to PATH if it's installed. It is expected that Arch Linux
 machines install rustup with their package manager. PKGBUILDs depending on any
 of the rust toolchain get confused if not managed by pacman. */ -}}
-{{- if (and (lookPath "cargo") (ne .chezmoi.osRelease.id "arch")) }}
+{{- if and (lookPath "cargo") (ne .chezmoi.osRelease.id "arch") }}
 . $HOME/.cargo/env
 {{- end }}
 
