@@ -1,12 +1,17 @@
 README.md
 
-// Arch Linux only.
+{{- /* Arch Linux only. */ -}}
 {{- if ne .chezmoi.osRelease.id "arch" }}
 .config/pacman
 .config/paru
 {{- end }}
 
-// Don't configure the GPG agent if there isn't one.
+{{- /* Don't configure the GPG agent if there isn't one. */ -}}
 {{- if not (lookPath "gpg-agent") }}
 .gnugpg
+{{- end }}
+
+{{- /* Ignore some config for matryoshka, it's unique. */ -}}
+{{- if eq .chezmoi.hostname "matryoshka" }}
+.ssh
 {{- end }}

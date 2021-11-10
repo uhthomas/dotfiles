@@ -1,7 +1,11 @@
 [user]
 	name = Thomas
-	email = 9749173+uhthomas@users.noreply.github.com
-	signingkey = B4A7E3C9945E937E
+	{{- if .git.email }}
+	email = {{ .git.email | quote }}
+	{{- end }}
+	{{- if .git.signingkey }}
+	signingkey = {{ .git.signingkey | quote }}
+	{{- end }}
 [commit]
 	gpgsign = true
 [push]
