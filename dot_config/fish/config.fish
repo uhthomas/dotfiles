@@ -8,6 +8,7 @@ if status is-interactive
     abbr -a tree tree -a -I .git
     abbr -a vi nvim
     abbr -a vim nvim
+    abbr -a grep rg
 
     bind \t complete-and-search
 end
